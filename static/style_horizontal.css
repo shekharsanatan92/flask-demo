@@ -1,0 +1,29 @@
+body            { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;}
+a, h1, h2       { color: #0b456b; }
+h1, h2          { margin: 0; }
+h1              { border-bottom: 2px solid rgb(124, 80, 80); }
+h2              { font-size: 1.2em; }
+
+table.dataframe, .dataframe th, .dataframe td {
+  border: none;
+  border-bottom: 1px solid #2ab157;
+  border-collapse: collapse;
+  text-align:left;
+  padding: 10px;
+  margin-bottom: 40px;
+  font-size: 0.9em;
+}
+
+.metadata th {
+    background-color: #add8e6;
+    color: rgb(255, 255, 255);
+}
+
+.value th {
+    background-color: #77dd77;
+    color: rgb(255, 255, 255);
+}
+
+tr:nth-child(odd)		{ background-color:#eee; }
+tr:nth-child(even)	{ background-color:#fff; }
+tr:hover            { background-color: #ffff99;}

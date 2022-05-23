@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Instance Details</title>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style_horizontal.css') }}">
+<a href = "/">Back</a><br> 
+<div class=page>
+  <br>
+  <h1>Instance Details</h1>
+  <br>
+  <a href = "/vertical"> >>Change view format<< </a><br>
+  <br>
+  {% for table in tables %}
+    <h2>{{titles[loop.index]}}</h2>
+    {{ table|safe }}
+  {% endfor %}
+</div>
