@@ -8,7 +8,7 @@ def create_instance_table():
     appended_data=[]
     for region in regions:
         indexd=['Instance-Id', 'Subnet-Id', 'Hostname', 'Public-Ip', 'Private-Ip', 'AMI-Id']
-        session = boto3.session.Session(profile_name='demouser')
+        session = boto3.session.Session()
         ec2 = session.resource('ec2', region_name=region)
         for instance in ec2.instances.all():
             detail=[]
@@ -38,7 +38,7 @@ def create_instance_table():
 def create_horizontal_instance_table():
     details=[]
     for region in regions:
-        session = boto3.session.Session(profile_name='demouser')
+        session = boto3.session.Session()
         ec2 = session.resource('ec2', region_name=region)
         column=['Instance-Id', 'Subnet-Id', 'Hostname', 'Public-Ip', 'Private-Ip', 'AMI-Id']
         for instance in ec2.instances.all():
@@ -69,7 +69,7 @@ def emr_details():
     lessthan24=[]
     morethan24=[]
     for region in regions:
-        session = boto3.session.Session(profile_name='demouser')
+        session = boto3.session.Session()
         client = session.client('emr',region_name=region)
         response = client.list_clusters(
             ClusterStates=['STARTING','BOOTSTRAPPING','RUNNING','WAITING','TERMINATED_WITH_ERRORS','TERMINATED'])
