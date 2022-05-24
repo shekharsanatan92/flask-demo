@@ -72,7 +72,7 @@ def emr_details():
         session = boto3.session.Session()
         client = session.client('emr',region_name=region)
         response = client.list_clusters(
-            ClusterStates=['STARTING','BOOTSTRAPPING','RUNNING','WAITING','TERMINATED_WITH_ERRORS','TERMINATED'])
+            ClusterStates=['STARTING','BOOTSTRAPPING','RUNNING','WAITING'])
 
         column=['EMR_ID', 'Creation_Date', 'Elapsed_Time']
 
