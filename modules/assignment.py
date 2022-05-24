@@ -86,7 +86,7 @@ def emr_details():
             detail.append(naive)
             
             diff = datetime.datetime.now() - naive
-            et= convert(int(diff.seconds))
+            et= str(diff.days) + " day, " + convert(int(diff.seconds))
             detail.append(et)
             
             if int(diff.days)>0:
