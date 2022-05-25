@@ -6,8 +6,9 @@
   <br>
   <h1>Instance Details</h1>
   <br>
-  <a href = "/horizontal"> >>Change view format<< </a><br>
+  <h3> Choose view format: <a href = "/ec2-table1"> [1] </a><a href = "/ec2-table2"> [2] </a><a href = "ec2-table3"> [3] </a></h3>
   <br>
+  <h5> Format 1</h5>
   {% for table in tables %}
     <h2>{{titles[loop.index]}}</h2>
     {{ table|safe }}

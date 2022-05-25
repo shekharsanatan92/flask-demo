@@ -1,15 +1,17 @@
 <!doctype html>
-<title>Instance Details</title>
+<title>EMR Details</title>
 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style_horizontal.css') }}">
 <a href = "/">Back</a><br> 
 <div class=page>
   <br>
-  <h1>Instance Details</h1>
-  <br>
-  <a href = "/vertical"> >>Change view format<< </a><br>
+  <h1>EMR Details</h1>
   <br>
   {% for table in tables %}
-    <h2>{{titles[loop.index]}}</h2>
+    {% if loop.index0 == 0 %}
+      <h2>Less than 24 Hours</h2>
+    {% else %}
+      <h2>More than 24 Hours</h2>
+    {% endif %}
     {{ table|safe }}
   {% endfor %}
 </div>
