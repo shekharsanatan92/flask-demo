@@ -11,7 +11,7 @@ def create_emr_table(session):
     for region in regions:    
         client = session.client('emr',region_name=region)
         response = client.list_clusters(
-            ClusterStates=['STARTING','BOOTSTRAPPING','RUNNING','WAITING','TERMINATED_WITH_ERRORS','TERMINATED'])
+            ClusterStates=['STARTING','BOOTSTRAPPING','RUNNING','WAITING'])
 
         for cluster in response['Clusters']:
             emr_cluster_detail(cluster,lessthan24,morethan24)
